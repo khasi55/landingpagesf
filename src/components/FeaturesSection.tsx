@@ -20,7 +20,7 @@ export default function FeaturesSection() {
                                     <div className="absolute inset-0 pointer-events-none transform-gpu">
                                         <img
                                             alt="Global Presence"
-                                            className="absolute h-[120.69%] left-[-21.77%] max-w-none top-[-50%] w-[138.4%] object-contain scale-[2.1] transform-gpu"
+                                            className="absolute max-w-none object-contain transform-gpu scale-110 md:scale-[2.1] h-full w-full left-0 top-0 md:h-[120.69%] md:left-[-21.77%] md:top-[-50%] md:w-[138.4%]"
                                             src="/assets/feature-global.png"
                                         />
                                     </div>
@@ -101,7 +101,7 @@ export default function FeaturesSection() {
                                     <div className="absolute inset-0 pointer-events-none transform-gpu">
                                         <img
                                             alt="Spreads from 0.0 pips"
-                                            className="absolute h-[120.69%] left-[-21.77%] max-w-none top-[-50%] w-[138.4%] object-contain scale-[1.5] transform-gpu"
+                                            className="absolute max-w-none object-contain transform-gpu scale-110 md:scale-[1.5] h-full w-full left-0 top-0 md:h-[120.69%] md:left-[-21.77%] md:top-[-50%] md:w-[138.4%]"
                                             src="/assets/feature-spreads.png"
                                         />
                                     </div>

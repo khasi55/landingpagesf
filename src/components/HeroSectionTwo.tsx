@@ -10,12 +10,16 @@ export default function HeroSectionTwo() {
                 <span className="text-[#818089] font-[family-name:var(--font-sora)] text-sm md:text-base whitespace-nowrap">
                     We are Featured in Top Media
                 </span>
-                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 grayscale opacity-60">
-                    <span className="text-xl font-bold text-gray-400">logo ipsum</span>
-                    <span className="text-xl font-bold text-gray-400">Logoipsum</span>
-                    <span className="text-xl font-bold text-gray-400">IPSUM</span>
-                    <span className="text-xl font-bold text-gray-400">Logoipsum</span>
-                    <span className="text-xl font-bold text-gray-400">IIIIIIII</span>
+                <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 grayscale opacity-60">
+                    <span className="text-lg md:text-xl font-bold text-gray-400">Forex Factory</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">Wall Street Journal</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">Yahoo Finance</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">MetaTrader</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">TradingView</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">Reuters</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">MetaStock</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">NinjaTrader</span>
+                    <span className="text-lg md:text-xl font-bold text-gray-400">Bloomberg</span>
                 </div>
             </div>
 
@@ -80,8 +84,8 @@ export default function HeroSectionTwo() {
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
 
                         {/* 300+ Instruments */}
-                        <div className="h-full rounded-[32px] bg-gradient-to-b from-[#F9FCFB] to-[#CBE0F0] relative overflow-hidden group p-8 flex flex-col justify-start text-center items-center border border-[#E9F0FF]">
-                            <h3 className="text-xl md:text-2xl font-bold text-black relative z-10 font-[family-name:var(--font-sora)] mb-4">
+                        <div className="h-[300px] md:h-full rounded-[32px] bg-gradient-to-b from-[#F9FCFB] to-[#CBE0F0] relative overflow-hidden group p-8 flex flex-col justify-start text-center items-center border border-[#E9F0FF]">
+                            <h3 className="text-xl md:text-2xl font-bold text-black relative z-10 font-[family-name:var(--font-sora)] mb-4 leading-tight">
                                 300+ Instruments
                             </h3>
                             <div className="absolute inset-x-0 top-0 h-full w-full flex items-center justify-center pointer-events-none">
@@ -94,7 +98,7 @@ export default function HeroSectionTwo() {
                         </div>
 
                         {/* MT5 Platform */}
-                        <div className="h-full rounded-[32px] bg-gradient-to-b from-[#F9FCFB] to-[#CBE0F0] relative overflow-hidden group p-8 pb-3 flex flex-col justify-end text-center items-center border border-[#E9F0FF]">
+                        <div className="h-[300px] md:h-full rounded-[32px] bg-gradient-to-b from-[#F9FCFB] to-[#CBE0F0] relative overflow-hidden group p-8 pb-3 flex flex-col justify-end text-center items-center border border-[#E9F0FF]">
                             <div className="absolute inset-x-0 top-0 h-full w-full flex items-center justify-center pointer-events-none">
                                 {/* Gradient Circle 1 (Larger) */}
                                 <div className="absolute w-[210px] h-[210px] rounded-full bg-gradient-to-b from-[rgba(0,58,167,0)] to-[rgba(0,58,167,0.23)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
@@ -108,7 +112,7 @@ export default function HeroSectionTwo() {
                                     className="w-[45%] max-w-none object-contain relative z-10"
                                 />
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold text-black relative z-10 font-[family-name:var(--font-sora)]">
+                            <h3 className="text-xl md:text-2xl font-bold text-black relative z-10 font-[family-name:var(--font-sora)] leading-tight">
                                 MT5 Platform
                             </h3>
                         </div>

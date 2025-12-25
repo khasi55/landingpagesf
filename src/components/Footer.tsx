@@ -96,8 +96,8 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="flex flex-col md:flex-row justify-between items-center py-10 border-t border-white/5 gap-6">
                     <div className="flex gap-10 text-base text-gray-400 font-medium">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+                        <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</a>
                     </div>
 
                     {/* Social Icons */}

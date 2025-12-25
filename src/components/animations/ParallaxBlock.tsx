@@ -20,7 +20,10 @@ export default function ParallaxBlock({ children, offset = 50, className = "" }:
 
     return (
         <div ref={ref} className={className} style={{ position: "relative", overflow: "visible" }}>
-            <motion.div style={{ y }} className="w-full h-full">
+            <motion.div
+                style={{ y, willChange: "transform" }}
+                className="w-full h-full transform-gpu"
+            >
                 {children}
             </motion.div>
         </div>

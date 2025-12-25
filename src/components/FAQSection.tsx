@@ -30,20 +30,29 @@ const faqs = [
     }
 ];
 
-export default function FAQSection() {
+interface FAQSectionProps {
+    theme?: 'light' | 'dark';
+}
+
+export default function FAQSection({ theme = 'light' }: FAQSectionProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const [activeTab, setActiveTab] = useState('General');
 
+    const isDark = theme === 'dark';
+    const bgColor = isDark ? 'bg-[#050B25]' : 'bg-white';
+    const textColor = isDark ? 'text-white' : 'text-black';
+    const subTextColor = isDark ? 'text-gray-400' : 'text-gray-500';
+
     return (
-        <section className="w-full bg-white py-20 px-4 flex flex-col items-center">
+        <section className={`w-full py-20 px-4 flex flex-col items-center ${bgColor}`}>
 
             {/* Header */}
             <RevealSection>
                 <div className="text-center mb-12">
-                    <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-black font-[family-name:var(--font-sora)] mb-4">
+                    <h2 className={`text-[clamp(32px,4vw,48px)] font-bold font-[family-name:var(--font-sora)] mb-4 ${textColor}`}>
                         Frequently Asked Questions
                     </h2>
-                    <p className="text-gray-500 font-[family-name:var(--font-sora)]">
+                    <p className={`${subTextColor} font-[family-name:var(--font-sora)]`}>
                         The main reasons why traders choose to trade with SharkFunded.
                     </p>
                 </div>
@@ -58,7 +67,9 @@ export default function FAQSection() {
                         className={`px-8 py-2 rounded-full font-bold border transition-all font-[family-name:var(--font-sora)]
               ${activeTab === tab
                                 ? 'bg-[#1E233B] text-white border-[#1E233B]'
-                                : 'bg-white text-gray-500 border-gray-200 hover:border-gray-400'
+                                : isDark
+                                    ? 'bg-transparent text-gray-400 border-white/10 hover:border-white/30'
+                                    : 'bg-white text-gray-500 border-gray-200 hover:border-gray-400'
                             }
             `}
                     >
@@ -72,7 +83,7 @@ export default function FAQSection() {
                 {faqs.map((faq, index) => (
                     <StaggerItem key={index}>
                         <div
-                            className="rounded-2xl overflow-hidden bg-[#0A0C1A] text-white border border-white/5 transition-all"
+                            className="rounded-2xl overflow-hidden bg-[#050B25] text-white border border-white/5 transition-all"
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -110,6 +121,25 @@ export default function FAQSection() {
                     {/* Background Gradients */}
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#05092B] via-[#0A1045] to-[#020412] z-0" />
                     <div className="absolute top-[-50%] left-[-20%] w-[800px] h-[800px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none" />
+
+                    {/* Rays Effect Overlay */}
+                    <div
+                        className="absolute inset-0 overflow-hidden pointer-events-none z-[1]"
+                        style={{ mixBlendMode: 'screen' }}
+                    >
+                        <img
+                            src="/assets/reviews-rays.png"
+                            alt=""
+                            className="absolute"
+                            style={{
+                                width: '160%',
+                                height: '240%',
+                                left: '-35%',
+                                top: '-70%',
+                                maxWidth: 'none'
+                            }}
+                        />
+                    </div>
 
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-16 gap-12">
                         {/* Left Text */}

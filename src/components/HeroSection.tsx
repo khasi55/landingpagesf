@@ -24,7 +24,7 @@ export default function HeroSection() {
         <section className="relative w-full bg-black z-20 flex flex-col items-center">
             {/* Visuals Container: Locked to 16/9 Aspect Ratio */}
             {/* The video and main text content live here */}
-            <div className="relative w-full min-h-[600px] md:min-h-0 md:aspect-video flex-none">
+            <div className="relative w-full min-h-[720px] md:min-h-0 md:aspect-video flex-none">
 
                 {/* BACKGROUND CLIPPER: Keeps video & glows contained within the 16:9 area */}
                 <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -139,10 +139,10 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {/* Dashboard Image - Positioned Relative for Flow Layout */}
+
             {/* Negative margin pulls it up to overlap the video bottom */}
             <div
-                className={`relative w-full max-w-[95%] md:max-w-[85%] lg:max-w-[1400px] z-30 transition-all duration-1000 ease-out px-4 mx-auto -mt-[10%] md:-mt-[9%] lg:-mt-[5%] mb-[3%] transform-gpu ${layer2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                className={`relative w-full max-w-[95%] md:max-w-[85%] lg:max-w-[1400px] z-30 transition-all duration-1000 ease-out px-4 mx-auto -mt-[140px] md:-mt-[6%] lg:-mt-[3%] mb-[3%] transform-gpu ${layer2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                     }`}
                 style={{ willChange: "transform, opacity" }}
             >

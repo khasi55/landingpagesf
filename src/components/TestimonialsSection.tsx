@@ -45,11 +45,12 @@ export default function TestimonialsSection() {
     ];
 
     const videoTestimonials = [
-        { name: "Jordy", country: "🇧🇪", amount: "$24,827.20", image: "/assets/testimonial-1.png" }, // Placeholder paths
-        { name: "Emre", country: "🇹🇷", amount: "$14,319.90", image: "/assets/testimonial-2.png" },
-        { name: "Dave", country: "🇳🇱", amount: "$4,195.37", image: "/assets/testimonial-3.png" },
-        { name: "John", country: "🇺🇸", amount: "$24,827.20", image: "/assets/testimonial-4.png" },
-        { name: "Emre", country: "🇹🇷", amount: "$24,827.20", image: "/assets/testimonial-2.png" },
+        { id: 1, videoId: "tWGu5AdCuaI" },
+        { id: 2, videoId: "a1TH5h7wlpw" },
+        { id: 3, videoId: "6TJ_Ro_0USg" },
+        { id: 4, videoId: "1_GasVnMlaE" },
+        { id: 5, videoId: "Nmosn8DWyjo" },
+        { id: 6, videoId: "LpCUhaWECWk" },
     ];
 
     return (
@@ -139,36 +140,17 @@ export default function TestimonialsSection() {
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {videoTestimonials.map((video, i) => (
-                        <div key={i} className="min-w-[280px] md:min-w-[320px] aspect-[9/16] relative rounded-[24px] overflow-hidden snap-center group cursor-pointer border border-white/5">
-                            {/* Fallback Background (Gradient if no image) */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 group-hover:scale-105 transition-transform duration-500" />
-
-                            {/* Image would go here: <img src={video.image} className="absolute inset-0 w-full h-full object-cover" /> */}
-
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-
-                            {/* Play Button Overlay */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
-                                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-                                </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="absolute bottom-0 left-0 w-full p-6">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <span className="text-white font-[family-name:var(--font-sora)] font-medium text-lg">{video.name}</span>
-                                    <span className="text-xl">{video.country}</span>
-                                </div>
-                                <div className="text-white/80 font-[family-name:var(--font-sora)] text-sm">
-                                    {video.amount}
-                                </div>
-                                {/* Shark Logo */}
-                                <div className="absolute bottom-6 right-6 w-8 h-8 opacity-80">
-                                    <img src="/assets/shark-logo.svg" alt="SharkFunded Logo" className="w-full h-full brightness-0 invert" />
-                                </div>
-                            </div>
+                        <div key={i} className="min-w-[280px] md:min-w-[320px] aspect-[9/16] relative rounded-[24px] overflow-hidden snap-center group cursor-pointer border border-white/5 bg-black">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src={`https://www.youtube.com/embed/${video.videoId}?enablejsapi=1&rel=0`}
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="w-full h-full object-cover rounded-[24px]"
+                            ></iframe>
                         </div>
                     ))}
                 </div>
