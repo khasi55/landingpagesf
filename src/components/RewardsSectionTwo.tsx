@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import RevealSection from './RevealSection';
 import StaggerContainer, { StaggerItem } from './animations/StaggerContainer';
 
 export default function RewardsSectionTwo() {
     return (
-        <section className="w-full bg-white relative flex flex-col items-center justify-center py-20 overflow-hidden z-20">
+        <section className="w-full bg-white relative flex flex-col items-center justify-center py-10 overflow-hidden z-20">
             <div className="w-[95%] max-w-[1800px] mx-auto">
 
                 {/* Header */}
@@ -19,13 +20,13 @@ export default function RewardsSectionTwo() {
                             </p>
                         </div>
                         <div>
-                            <button className="relative group overflow-hidden rounded-full min-w-[140px] px-8 py-3 transition-transform hover:scale-105 active:scale-95">
+                            <Link href="https://dashboard.sharkfunded.com/register" className="relative group overflow-hidden rounded-full min-w-[140px] px-8 py-3 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center">
                                 <div className="absolute inset-0 bg-gradient-to-r from-[rgb(92,176,255)] to-[rgb(0,31,99)] opacity-100" />
                                 <div className="absolute inset-0 shadow-[inset_0px_4px_13.4px_0px_#79c3ff] rounded-full pointer-events-none" />
                                 <span className="relative z-10 flex items-center justify-center w-full h-full text-base font-normal text-white font-sans tracking-[-0.05em]">
                                     Get Funded
                                 </span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </RevealSection>
@@ -77,10 +78,20 @@ export default function RewardsSectionTwo() {
 
                     {/* Strip 1: Scroll Left */}
                     <StaggerItem className="w-full relative group">
-                        <div className="flex gap-6 animate-scroll-fast w-max">
-                            {/* Duplicate images for seamless scroll */}
-                            {[...Array(6)].map((_, i) => (
-                                <img key={i} src="/assets/cert-strip-1.png" alt="Certificates" className="h-[200px] w-auto object-contain opacity-90 transition-all group-hover:opacity-100 group-hover:scale-[1.02]" />
+                        <div className="flex gap-6 animate-scroll-fast w-max will-change-transform">
+                            {/* Cycle through certs 1-5 */}
+                            {[...Array(4)].map((_, rep) => (
+                                <React.Fragment key={rep}>
+                                    {[1, 2, 3, 4, 5].map((num) => (
+                                        <div key={`s1-${rep}-${num}`} className="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-[160px] w-auto">
+                                            <img
+                                                src={`/assets/new_certs/cert-${num}.png`}
+                                                alt={`Certificate ${num}`}
+                                                className="h-full w-auto object-contain opacity-90 transition-all group-hover:opacity-100 group-hover:scale-[1.02]"
+                                            />
+                                        </div>
+                                    ))}
+                                </React.Fragment>
                             ))}
                         </div>
                         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
@@ -89,21 +100,42 @@ export default function RewardsSectionTwo() {
 
                     {/* Strip 2: Scroll Right */}
                     <StaggerItem className="w-full relative group">
-                        <div className="flex gap-6 animate-scroll-fast-reverse w-max">
-                            {[...Array(6)].map((_, i) => (
-                                <img key={i} src="/assets/cert-strip-2.png" alt="Certificates" className="h-[200px] w-auto object-contain z-10 shadow-xl opacity-90 transition-all group-hover:opacity-100 group-hover:scale-[1.02]" />
+                        <div className="flex gap-6 animate-scroll-fast-reverse w-max will-change-transform">
+                            {/* Cycle through certs 6-10 */}
+                            {[...Array(4)].map((_, rep) => (
+                                <React.Fragment key={rep}>
+                                    {[6, 7, 8, 9, 10].map((num) => (
+                                        <div key={`s2-${rep}-${num}`} className="bg-white p-2 rounded-xl shadow-md border border-gray-100 flex items-center justify-center h-[160px] w-auto">
+                                            <img
+                                                src={`/assets/new_certs/cert-${num}.png`}
+                                                alt={`Certificate ${num}`}
+                                                className="h-full w-auto object-contain z-10 opacity-90 transition-all group-hover:opacity-100 group-hover:scale-[1.02]"
+                                            />
+                                        </div>
+                                    ))}
+                                </React.Fragment>
                             ))}
                         </div>
                         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
                         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
                     </StaggerItem>
 
-
                     {/* Strip 3: Scroll Left */}
                     <StaggerItem className="w-full relative group">
-                        <div className="flex gap-6 animate-scroll-fast w-max">
-                            {[...Array(6)].map((_, i) => (
-                                <img key={i} src="/assets/cert-strip-3.png" alt="Certificates" className="h-[200px] w-auto object-contain opacity-50 transition-all group-hover:opacity-100 group-hover:scale-[1.02]" />
+                        <div className="flex gap-6 animate-scroll-fast w-max will-change-transform">
+                            {/* Cycle through certs 1-5 again or mix */}
+                            {[...Array(4)].map((_, rep) => (
+                                <React.Fragment key={rep}>
+                                    {[1, 3, 5, 7, 9].map((num) => (
+                                        <div key={`s3-${rep}-${num}`} className="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-[160px] w-auto">
+                                            <img
+                                                src={`/assets/new_certs/cert-${num}.png`}
+                                                alt={`Certificate ${num}`}
+                                                className="h-full w-auto object-contain opacity-50 transition-all group-hover:opacity-100 group-hover:scale-[1.02]"
+                                            />
+                                        </div>
+                                    ))}
+                                </React.Fragment>
                             ))}
                         </div>
                         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />

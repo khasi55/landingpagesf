@@ -17,7 +17,7 @@ export default function RewardsSection() {
     ];
 
     return (
-        <section className="w-full bg-white relative flex flex-col items-center justify-center py-24 px-4 overflow-hidden z-20">
+        <section className="w-full bg-white relative flex flex-col items-center justify-center py-10 px-4 overflow-hidden z-20">
 
             <div className="w-full max-w-[1200px] mx-auto text-center">
 

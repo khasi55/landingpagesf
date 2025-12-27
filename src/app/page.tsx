@@ -59,34 +59,34 @@ export default function Home() {
 
       {/* Pricing Section */}
       {/* Adjusted margin to account for container and hero height */}
-      <div className="relative w-full z-40 mt-[10vw]">
+      <div className="relative w-full z-40 mt-12 md:mt-20">
         <PricingSection />
       </div>
 
       {/* Rewards Section with White Background */}
       <RevealSection>
-        <div className="relative w-full bg-white z-10 py-24 md:py-32 mt-32">
+        <div className="relative w-full bg-white z-10">
           <RewardsSection />
         </div>
       </RevealSection>
 
       {/* Rewards Section Two - Flexible Payouts (White Background) */}
       <RevealSection>
-        <div className="relative w-full bg-white z-20 py-24 md:py-32">
+        <div className="relative w-full bg-white z-20">
           <RewardsSectionTwo />
         </div>
       </RevealSection>
 
       {/* Testimonials Section */}
       <RevealSection>
-        <div className="relative w-full bg-white z-20 pb-20">
+        <div className="relative w-full bg-white z-20">
           <TestimonialsSection />
         </div>
       </RevealSection>
 
       {/* FAQ Section with CTA Banner */}
       <RevealSection>
-        <div className="relative w-full bg-white z-20 pb-32">
+        <div className="relative w-full bg-white z-20">
           <FAQSection />
         </div>
       </RevealSection>

@@ -35,7 +35,7 @@ export default function Navbar() {
                 {/* Desktop Navigation - Centered Flex Group */}
                 <nav className="hidden lg:flex items-center text-white font-light" style={{ gap: 'clamp(10px, 1.5vw, 30px)' }}>
                     <Link
-                        href="#"
+                        href="/#pricing"
                         className="hover:text-blue-400 transition-colors"
                         style={{
                             fontSize: '14px',
@@ -55,7 +55,7 @@ export default function Navbar() {
                         Rewards
                     </Link>
                     <Link
-                        href="#"
+                        href="/affiliate"
                         className="hover:text-blue-400 transition-colors"
                         style={{
                             fontSize: '14px',
@@ -147,8 +147,9 @@ export default function Navbar() {
                 </nav>
                 {/* Action Buttons */}
                 <div className="hidden lg:flex items-center shrink-0" style={{ gap: 'clamp(10px, 1vw, 16px)' }}>
-                    <button
-                        className="rounded-[65px] border border-[#6880ff] text-white font-normal hover:bg-[#6880ff]/10 transition-colors"
+                    <Link
+                        href="https://dashboard.sharkfunded.com/login"
+                        className="rounded-[65px] border border-[#6880ff] text-white font-normal hover:bg-[#6880ff]/10 transition-colors flex items-center justify-center"
                         style={{
                             width: 'clamp(80px, 8vw, 140px)',
                             height: 'clamp(36px, 3.5vw, 56px)',
@@ -157,14 +158,14 @@ export default function Navbar() {
                         }}
                     >
                         Login
-                    </button>
-                    <button className="relative group overflow-hidden rounded-full w-[clamp(100px,10vw,180px)] h-[clamp(36px,3.5vw,56px)] transition-transform hover:scale-105 active:scale-95">
+                    </Link>
+                    <Link href="https://dashboard.sharkfunded.com/register" className="relative group overflow-hidden rounded-full w-[clamp(100px,10vw,180px)] h-[clamp(36px,3.5vw,56px)] transition-transform hover:scale-105 active:scale-95 block">
                         <div className="absolute inset-0 bg-gradient-to-r from-[rgb(92,176,255)] to-[rgb(0,31,99)] opacity-100" />
                         <div className="absolute inset-0 shadow-[inset_0px_4px_13.4px_0px_#79c3ff] rounded-full pointer-events-none" />
                         <span className="relative z-10 flex items-center justify-center w-full h-full text-[clamp(14px,1.2vw,22px)] font-normal text-white font-sans tracking-[-0.05em]">
                             Get Started
                         </span>
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Toggle - Hidden as we now use bottom navigation */}
@@ -203,10 +204,10 @@ export default function Navbar() {
                             className="fixed top-1/2 left-1/2 z-[70] w-[90%] max-w-[400px] bg-[#040822]/80 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center gap-6 shadow-2xl lg:hidden max-h-[70vh] overflow-y-auto no-scrollbar"
                             style={{ transform: "translate(-50%, -50%)" }}
                         >
-                            <Link href="#" className="text-white/90 hover:text-white text-lg font-medium transition-colors">Home</Link>
-                            <Link href="#" className="text-white/90 hover:text-white text-lg font-medium transition-colors">Challenges</Link>
+                            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white/90 hover:text-white text-lg font-medium transition-colors">Home</Link>
+                            <Link href="/#pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-white/90 hover:text-white text-lg font-medium transition-colors">Challenges</Link>
                             <Link href="#" className="text-white/90 hover:text-white text-lg font-medium transition-colors">Rewards</Link>
-                            <Link href="#" className="text-white/90 hover:text-white text-lg font-medium transition-colors">Partner Up</Link>
+                            <Link href="/affiliate" className="text-white/90 hover:text-white text-lg font-medium transition-colors">Partner Up</Link>
 
                             {/* Mobile About Us Accordion */}
                             <div className="w-full flex flex-col items-center">
@@ -269,14 +270,14 @@ export default function Navbar() {
                             <Link href="/reviews" className="text-white/90 hover:text-white text-lg font-medium transition-colors">Reviews</Link>
 
                             <div className="w-full pt-4 flex flex-col gap-3">
-                                <button className="w-full h-[48px] rounded-full border border-[#6880ff] text-white text-base font-medium hover:bg-[#6880ff]/10 transition-colors">Login</button>
-                                <button className="relative group overflow-hidden rounded-full w-full h-[48px] transition-transform hover:scale-105 active:scale-95">
+                                <Link href="https://dashboard.sharkfunded.com/login" className="w-full h-[48px] rounded-full border border-[#6880ff] text-white text-base font-medium hover:bg-[#6880ff]/10 transition-colors flex items-center justify-center">Login</Link>
+                                <Link href="https://dashboard.sharkfunded.com/register" className="relative group overflow-hidden rounded-full w-full h-[48px] transition-transform hover:scale-105 active:scale-95 block">
                                     <div className="absolute inset-0 bg-gradient-to-r from-[rgb(92,176,255)] to-[rgb(0,31,99)] opacity-100" />
                                     <div className="absolute inset-0 shadow-[inset_0px_4px_13.4px_0px_#79c3ff] rounded-full pointer-events-none" />
                                     <span className="relative z-10 flex items-center justify-center w-full h-full text-base font-medium text-white font-sans tracking-[-0.05em]">
                                         Get Started
                                     </span>
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
 

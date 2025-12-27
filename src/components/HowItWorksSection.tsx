@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import RevealSection from './RevealSection';
 import StaggerContainer, { StaggerItem } from './animations/StaggerContainer';
 
@@ -8,7 +9,7 @@ interface HowItWorksSectionProps {
 
 export default function HowItWorksSection({ showStats = true }: HowItWorksSectionProps) {
     return (
-        <section className="w-full bg-[#030511] py-20 px-4 relative overflow-hidden text-center z-10">
+        <section className="w-full bg-[#030511] py-12 px-4 relative overflow-hidden text-center z-10">
             {/* Background Rays (Beam) - Global for Section */}
             <div className="absolute inset-x-0 top-0 h-full z-20 mix-blend-screen pointer-events-none overflow-hidden">
                 <img
@@ -24,7 +25,7 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
                 {/* --- STATS SECTION --- */}
                 {showStats && (
                     <RevealSection>
-                        <div className="relative rounded-[50px] border border-white/5 bg-[#15172E] p-3 md:p-4 mb-32 overflow-hidden max-w-[1000px] mx-auto">
+                        <div className="relative rounded-[50px] border border-white/5 bg-[#15172E] p-3 md:p-4 mb-10 overflow-hidden max-w-[1000px] mx-auto">
                             {/* Stats Grid */}
                             <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-3 relative z-10">
                                 {/* Main Big Card */}
@@ -78,7 +79,7 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
 
                 {/* --- HOW IT WORKS SECTION --- */}
                 <RevealSection>
-                    <div className="mb-20">
+                    <div className="mb-12">
                         <h2 className="text-[clamp(32px,4vw,52px)] font-bold text-white mb-4 font-[family-name:var(--font-sora)]">
                             How it Works?
                         </h2>
@@ -200,13 +201,13 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
                 {/* CTA Button */}
                 <RevealSection>
                     <div>
-                        <button className="relative group overflow-hidden rounded-full min-w-[120px] md:min-w-[140px] px-6 py-3 md:px-6 md:py-3 transition-transform hover:scale-110 active:scale-95">
+                        <Link href="https://dashboard.sharkfunded.com/register" className="relative group overflow-hidden rounded-full min-w-[120px] md:min-w-[140px] px-6 py-3 md:px-6 md:py-3 transition-transform hover:scale-110 active:scale-95 inline-block">
                             <div className="absolute inset-0 bg-gradient-to-r from-[rgb(92,176,255)] to-[rgb(0,31,99)] opacity-100" />
                             <div className="absolute inset-0 shadow-[inset_0px_4px_13.4px_0px_#79c3ff] rounded-full pointer-events-none" />
                             <span className="relative z-10 flex items-center justify-center w-full h-full text-[clamp(14px,1vw,16px)] font-normal text-white font-sans tracking-[-0.05em]">
                                 Get Funded
                             </span>
-                        </button>
+                        </Link>
                     </div>
                 </RevealSection>
 

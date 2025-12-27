@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import RevealSection from './RevealSection';
@@ -44,7 +45,7 @@ export default function FAQSection({ theme = 'light' }: FAQSectionProps) {
     const subTextColor = isDark ? 'text-gray-400' : 'text-gray-500';
 
     return (
-        <section className={`w-full py-20 px-4 flex flex-col items-center ${bgColor}`}>
+        <section className={`w-full py-12 px-4 flex flex-col items-center ${bgColor}`}>
 
             {/* Header */}
             <RevealSection>
@@ -151,13 +152,13 @@ export default function FAQSection({ theme = 'light' }: FAQSectionProps) {
                                 SharkFunded has one mission – to help India get Funded!
                             </div>
                             <div className="flex flex-wrap gap-4">
-                                <button className="relative group overflow-hidden rounded-full min-w-[140px] px-8 py-3 transition-transform hover:scale-105 active:scale-95">
+                                <Link href="https://dashboard.sharkfunded.com/register" className="relative group overflow-hidden rounded-full min-w-[140px] px-8 py-3 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center">
                                     <div className="absolute inset-0 bg-gradient-to-r from-[rgb(92,176,255)] to-[rgb(0,31,99)] opacity-100" />
                                     <div className="absolute inset-0 shadow-[inset_0px_4px_13.4px_0px_#79c3ff] rounded-full pointer-events-none" />
                                     <span className="relative z-10 flex items-center justify-center w-full h-full text-base font-normal text-white font-sans tracking-[-0.05em]">
                                         Get Started
                                     </span>
-                                </button>
+                                </Link>
                                 <button className="px-8 py-3 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-colors font-[family-name:var(--font-sora)]">
                                     How it works?
                                 </button>

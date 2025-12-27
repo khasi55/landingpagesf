@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import Link from 'next/link';
+
 export default function Footer() {
     return (
         <footer className="w-full bg-[#00020E] text-white pt-20 pb-48 relative overflow-hidden font-[family-name:var(--font-sora)]">
@@ -31,9 +33,9 @@ export default function Footer() {
                             Copyright ©2025 SharkFunded. All rights reserved.
                         </p>
                     </div>
-                    <button className="px-10 py-4 bg-gradient-to-b from-[#1C3F85] to-[#0A1835] border border-[#2B60C8] text-white font-bold rounded-xl shadow-[0_0_30px_rgba(28,63,133,0.3)] hover:brightness-110 transition-all text-lg">
+                    <Link href="https://dashboard.sharkfunded.com/register" className="px-10 py-4 bg-gradient-to-b from-[#1C3F85] to-[#0A1835] border border-[#2B60C8] text-white font-bold rounded-xl shadow-[0_0_30px_rgba(28,63,133,0.3)] hover:brightness-110 transition-all text-lg inline-block text-center">
                         Get Funded
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Links & Newsletter Grid */}
@@ -82,9 +84,9 @@ export default function Footer() {
                                 placeholder="Your Email Address"
                                 className="flex-1 bg-white text-black px-6 py-4 rounded-xl focus:outline-none text-base"
                             />
-                            <button className="px-8 py-4 bg-gradient-to-b from-[#1C3F85] to-[#0A1835] border border-[#2B60C8] text-white font-bold rounded-xl hover:brightness-110 transition-all whitespace-nowrap">
+                            <Link href="https://dashboard.sharkfunded.com/register" className="px-8 py-4 bg-gradient-to-b from-[#1C3F85] to-[#0A1835] border border-[#2B60C8] text-white font-bold rounded-xl hover:brightness-110 transition-all whitespace-nowrap flex items-center justify-center">
                                 Get Started
-                            </button>
+                            </Link>
                         </div>
                         <p className="text-gray-500 text-sm leading-relaxed italic">
                             {String.fromCharCode(123)} Will send you weekly updates for your better business management. {String.fromCharCode(125)}

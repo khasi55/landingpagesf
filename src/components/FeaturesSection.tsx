@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import RevealSection from './RevealSection';
 import StaggerContainer, { StaggerItem } from './animations/StaggerContainer';
 import ParallaxBlock from './animations/ParallaxBlock';
@@ -6,7 +7,7 @@ import ParallaxBlock from './animations/ParallaxBlock';
 export default function FeaturesSection() {
     return (
         <section className="w-full bg-white py-24 px-4 relative text-left z-10">
-            <div className="max-w-[1240px] mx-auto space-y-32">
+            <div className="max-w-[1240px] mx-auto space-y-16">
 
                 {/* --- BLOCK 1: Global Presence --- */}
                 <RevealSection>
@@ -56,9 +57,9 @@ export default function FeaturesSection() {
                                 </StaggerItem>
                             </StaggerContainer>
 
-                            <button className="px-8 py-3 bg-gradient-to-b from-[#5D95FF] to-[#3B72F0] text-white text-sm font-bold rounded-full shadow-[0_4px_20px_rgba(59,114,240,0.3)] hover:scale-105 transition-transform font-[family-name:var(--font-sora)]">
+                            <Link href="https://dashboard.sharkfunded.com/register" className="px-8 py-3 bg-gradient-to-b from-[#5D95FF] to-[#3B72F0] text-white text-sm font-bold rounded-full shadow-[0_4px_20px_rgba(59,114,240,0.3)] hover:scale-105 transition-transform font-[family-name:var(--font-sora)] inline-block">
                                 Get Funded
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </RevealSection>

@@ -54,10 +54,10 @@ export default function TestimonialsSection() {
     ];
 
     return (
-        <section className="w-full flex flex-col items-center justify-center py-24 relative z-20">
+        <section className="w-full flex flex-col items-center justify-center py-12 relative z-20">
 
             {/* 1. TEXT TESTIMONIALS */}
-            <div className="w-full max-w-[1598px] px-4 mx-auto mb-32">
+            <div className="w-full max-w-[1598px] px-4 mx-auto mb-12">
                 <div className="flex justify-between items-end mb-12">
                     <div>
                         <h2 className="font-[family-name:var(--font-sora)] font-medium text-black text-[40px] md:text-[56px] leading-[1.1] tracking-[-0.04em] mb-4">

@@ -3,23 +3,31 @@ import AnimatedHeading from "./animations/AnimatedHeading";
 
 export default function HeroSectionTwo() {
     return (
-        <section className="w-full flex flex-col items-center justify-center text-center px-4 relative z-20 bg-white py-20">
+        <section className="w-full flex flex-col items-center justify-center text-center px-4 relative z-20 bg-white py-10">
 
             {/* 1. Featured Media Strip */}
-            <div className="w-full max-w-[1400px] flex flex-col md:flex-row items-center justify-between gap-8 mb-32 opacity-70">
-                <span className="text-[#818089] font-[family-name:var(--font-sora)] text-sm md:text-base whitespace-nowrap">
+            <div className="w-full max-w-[1400px] flex flex-col md:flex-row items-center justify-between gap-8 mb-20 opacity-70 overflow-hidden">
+                <span className="text-[#818089] font-[family-name:var(--font-sora)] text-sm md:text-base whitespace-nowrap z-10 bg-white pr-4">
                     We are Featured in Top Media
                 </span>
-                <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 grayscale opacity-60">
-                    <span className="text-lg md:text-xl font-bold text-gray-400">Forex Factory</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">Wall Street Journal</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">Yahoo Finance</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">MetaTrader</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">TradingView</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">Reuters</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">MetaStock</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">NinjaTrader</span>
-                    <span className="text-lg md:text-xl font-bold text-gray-400">Bloomberg</span>
+
+                <div className="relative w-full overflow-hidden mask-linear-fade">
+                    <div className="flex w-max animate-scroll-left gap-12 grayscale opacity-60 will-change-transform">
+                        {/* Triplicated list for seamless infinite scroll */}
+                        {[...Array(4)].map((_, i) => (
+                            <React.Fragment key={i}>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">Forex Factory</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">Wall Street Journal</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">Yahoo Finance</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">MetaTrader</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">TradingView</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">Reuters</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">MetaStock</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">NinjaTrader</span>
+                                <span className="text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">Bloomberg</span>
+                            </React.Fragment>
+                        ))}
+                    </div>
                 </div>
             </div>
 
