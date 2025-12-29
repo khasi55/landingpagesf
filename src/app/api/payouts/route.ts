@@ -4,6 +4,9 @@ import axios from 'axios';
 import { TronWeb } from 'tronweb';
 import { createClient } from '@supabase/supabase-js';
 
+// Configure Edge Runtime for Cloudflare Pages
+export const runtime = 'edge';
+
 // Initialize TronWeb (Server-side only)
 // using a dummy private key as we only need read access for this instance, 
 // or dependent on how TronWeb is initialized for just addressing util.

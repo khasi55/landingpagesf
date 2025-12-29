@@ -9,6 +9,9 @@ import RevealSection from "@/components/RevealSection";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
+// Configure Edge Runtime for Cloudflare Pages
+export const runtime = 'edge';
+
 export default function BlogPostPage() {
     const params = useParams();
     const slug = params?.slug as string;
