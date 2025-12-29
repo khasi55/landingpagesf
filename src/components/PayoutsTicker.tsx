@@ -2,18 +2,18 @@ import React from "react";
 import Image from "next/image";
 
 const payoutImages = [
-    "/assets/payout_1.png?v=whatsapp",
-    "/assets/payout_2.png?v=whatsapp",
-    "/assets/payout_3.png?v=whatsapp",
-    "/assets/payout_4.png?v=whatsapp",
-    "/assets/payout_5.png?v=whatsapp",
-    "/assets/payout_6.png?v=whatsapp",
-    "/assets/payout_7.png?v=whatsapp",
-    "/assets/payout_8.png?v=whatsapp",
-    "/assets/payout_9.png?v=whatsapp",
-    "/assets/payout_10.png?v=whatsapp",
-    "/assets/payout_11.png?v=whatsapp",
-    "/assets/payout_12.png?v=whatsapp"
+    "/assets/payout_1.webp?v=whatsapp",
+    "/assets/payout_2.webp?v=whatsapp",
+    "/assets/payout_3.webp?v=whatsapp",
+    "/assets/payout_4.webp?v=whatsapp",
+    "/assets/payout_5.webp?v=whatsapp",
+    "/assets/payout_6.webp?v=whatsapp",
+    "/assets/payout_7.webp?v=whatsapp",
+    "/assets/payout_8.webp?v=whatsapp",
+    "/assets/payout_9.webp?v=whatsapp",
+    "/assets/payout_10.webp?v=whatsapp",
+    "/assets/payout_11.webp?v=whatsapp",
+    "/assets/payout_12.webp?v=whatsapp"
 ];
 
 const initialPayouts = [

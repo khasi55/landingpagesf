@@ -123,7 +123,7 @@ export async function GET() {
         amount: formatCurrency(p.amount), // Formatted string for UI
         numericAmount: parseFloat(p.amount), // Raw number for math/table
         user: p.user_name || maskAddress(p.recipient_address),
-        img: '/assets/payout_1.png?v=whatsapp',
+        img: '/assets/payout_1.webp?v=whatsapp',
         date: p.payout_date, // Keep original
         timestamp: p.payout_date, // Alias for frontend compatibility
         txID: p.tx_id, // Essential for table link

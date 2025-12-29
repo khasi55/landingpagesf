@@ -32,7 +32,7 @@ export default function AboutUsPage() {
                     </div>
                     <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ mixBlendMode: 'screen' }}>
                         <img
-                            src="/assets/reviews-rays.png"
+                            src="/assets/reviews-rays.webp"
                             alt=""
                             className="absolute w-[120%] h-[140%] left-[-10%] top-[10%] max-w-none transform scale-y-[-1]"
                         />

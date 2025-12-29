@@ -262,7 +262,7 @@ export default function ReviewsPage() {
                         style={{ mixBlendMode: 'screen' }}
                     >
                         <img
-                            src="/assets/reviews-rays.png"
+                            src="/assets/reviews-rays.webp"
                             alt=""
                             className="absolute"
                             style={{

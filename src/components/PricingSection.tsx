@@ -73,7 +73,7 @@ export default function PricingSection() {
                     {/* Jellyfish Background */}
                     <div className="absolute -top-[20%] -right-[15%] w-[60%] h-[1000px] pointer-events-none z-0 overflow-visible mix-blend-screen opacity-100 hidden md:block transform-gpu">
                         <img
-                            src="/assets/jellyfish-figma.png"
+                            src="/assets/jellyfish-figma.webp"
                             alt=""
                             className="w-full h-full object-contain opacity-100 transform-gpu"
                             loading="lazy"

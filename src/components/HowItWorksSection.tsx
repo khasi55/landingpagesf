@@ -15,7 +15,7 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
                 <img
                     alt="Background Rays"
                     className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-full max-w-none h-[120%] object-cover opacity-60 transform-gpu"
-                    src="/assets/how-it-works-bg.png"
+                    src="/assets/how-it-works-bg.webp"
                     loading="lazy"
                 />
             </div>
@@ -107,7 +107,7 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
                                 <img
                                     alt="Evaluation Step"
                                     className="absolute h-[130.9%] left-[-40.94%] max-w-none top-[-10.68%] w-[183.41%] object-cover pointer-events-none scale-[0.85] transition-transform duration-700 group-hover:scale-[0.9] transform-gpu will-change-transform"
-                                    src="/assets/step1-image.png"
+                                    src="/assets/step1-image.webp"
                                     loading="lazy"
                                 />
                             </div>
@@ -142,7 +142,7 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
                                 <img
                                     alt="Funded Phase Step"
                                     className="absolute h-[171.35%] left-[-62.47%] max-w-none top-[-39.16%] w-[201.89%] object-cover pointer-events-none scale-[0.85] transition-transform duration-700 group-hover:scale-[0.9] transform-gpu will-change-transform"
-                                    src="/assets/step2-image.png"
+                                    src="/assets/step2-image.webp"
                                     loading="lazy"
                                 />
                             </div>
@@ -177,7 +177,7 @@ export default function HowItWorksSection({ showStats = true }: HowItWorksSectio
                                 <img
                                     alt="Payout Pockets"
                                     className="w-[120%] h-auto object-contain max-w-none transition-transform duration-700 group-hover:translate-y-[-10px] transform-gpu will-change-transform"
-                                    src="/assets/step3-final.png"
+                                    src="/assets/step3-final.webp"
                                     loading="lazy"
                                 />
                             </div>

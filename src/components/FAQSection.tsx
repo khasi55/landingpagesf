@@ -218,7 +218,7 @@ export default function FAQSection({ theme = 'light' }: FAQSectionProps) {
                         style={{ mixBlendMode: 'screen' }}
                     >
                         <img
-                            src="/assets/reviews-rays.png"
+                            src="/assets/reviews-rays.webp"
                             alt=""
                             className="absolute"
                             style={{
@@ -258,7 +258,7 @@ export default function FAQSection({ theme = 'light' }: FAQSectionProps) {
                         <div className="flex-1 w-full max-w-[600px] relative">
                             <ParallaxBlock offset={-30}>
                                 <img
-                                    src="/assets/frame-cta.png"
+                                    src="/assets/frame-cta.webp"
                                     alt="Prop Trading Dashboard"
                                     className="w-full h-auto object-contain drop-shadow-2xl"
                                 />

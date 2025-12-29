@@ -22,7 +22,7 @@ export default function FeaturesSection() {
                                         <img
                                             alt="Global Presence"
                                             className="absolute max-w-none object-contain transform-gpu scale-110 md:scale-[2.1] h-full w-full left-0 top-0 md:h-[120.69%] md:left-[-21.77%] md:top-[-50%] md:w-[138.4%]"
-                                            src="/assets/feature-global.png"
+                                            src="/assets/feature-global.webp"
                                         />
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@ export default function FeaturesSection() {
                                         <img
                                             alt="Spreads from 0.0 pips"
                                             className="absolute max-w-none object-contain transform-gpu scale-110 md:scale-[1.5] h-full w-full left-0 top-0 md:h-[120.69%] md:left-[-21.77%] md:top-[-50%] md:w-[138.4%]"
-                                            src="/assets/feature-spreads.png"
+                                            src="/assets/feature-spreads.webp"
                                         />
                                     </div>
                                 </div>
