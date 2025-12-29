@@ -98,7 +98,7 @@ export default function PricingSection() {
 
                             {/* 0. NEW: Instruments Selector (Forex/Futures) */}
                             <div className="w-full">
-                                <p className="text-white/60 text-xs uppercase tracking-wider font-bold text-center mb-3">Instruments</p>
+
                                 <div className="flex gap-3 w-full">
                                     <button
                                         onClick={() => setActiveTab('Forex')}
