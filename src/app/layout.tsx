@@ -14,7 +14,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "SharkFunded - Premium Prop Firm",
+  title: "SharkFunded",
   description: "Join SharkFunded and start your trading journey.",
 };
 
@@ -32,10 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* Preload LCP image for faster render */}
+        <link rel="preload" as="image" href="/assets/trending-shark-icon.png" />
+
+        {/* Preconnect only to most critical origins */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://www.youtube.com" />
-        <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </head>
       <body
         className={`${sora.variable} antialiased`}

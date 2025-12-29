@@ -89,6 +89,7 @@ export default function HeroSection() {
                                             src="/assets/selected-figma-logo.png"
                                             alt="Icon"
                                             fill
+                                            priority
                                             className="object-cover"
                                             sizes="24px"
                                         />
@@ -113,8 +114,9 @@ export default function HeroSection() {
                                     >
                                         <Image
                                             src="/assets/trending-shark-icon.png"
-                                            alt=""
+                                            alt="Trending up icon"
                                             fill
+                                            priority
                                             className="object-contain"
                                             sizes="60px"
                                         />
